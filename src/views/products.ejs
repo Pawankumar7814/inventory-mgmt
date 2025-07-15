@@ -1,3 +1,9 @@
+<style>
+    .productImage {
+        width: 80px;
+    }
+</style>
+
 <table class="table table-dark">
     <thead>
         <tr>
@@ -12,18 +18,18 @@
         <% products.forEach(product => { %>
             <tr>
                 <th scope="row">
-                    <%= product._id %>
+                    <%= product.id %>
                 </th>
                 <td>
-                    <%= product._name %>
+                    <%= product.name %>
                 </td>
                 <td>
-                    <%= product._description %>
+                    <%= product.description %>
                 </td>
                 <td>
-                    <%= product._price %>
+                    <%= product.price %>
                 </td>
-                <td><img src="<%= product._image %>" class="productImage" alt="Product Image"></td>
+                <td><img src="<%= product.image %>" class="productImage" alt="Product Image"></td>
             </tr>
             <% }); %>
     </tbody>
